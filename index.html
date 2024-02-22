@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>百人一首</title>
+        <meta name="description" content="HTMLサイト">
+        <!--CORSエラー回避のためにJSONファイルを拡張子.jsで保存する→読み込む-->
+        <script src="hyakunin.json.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>百人一首検索</h1>
+        <h2>上の句または下の句から検索</h2>
+        <p>検索ワード（始めの数文字でOK）を入力してください</p>
+        <p>※空欄の状態で検索を押すと全首表示できます</p>
+        <input type="text" id="searchword" placeholder="ひらがなで入力">
+        <button id="input-button-kami">検索（上の句から）</button>
+        <button id="input-button-simo">検索（下の句から）</button>
+        <p>結果：<span id="searchresult"></span></p>
+        <ul id="searchtext">
+            
+        </ul>
+        <p>データは次のサイトを参照しています：<a href="https://api.aoikujira.com/index.php?hyakunin&show">hyakunin-クジラ百人一首API</a></p>
+    </body>
+</html>
