@@ -29,8 +29,9 @@ h1{
 }
 h2{
     font-family: "Kiwi Maru",serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
+    white-space: nowrap;
 }
 .search_box{
     text-align: center;
@@ -71,11 +72,18 @@ h2{
     font-size: 1.3rem;
     font-family: "Klee One",cursive;
     line-height: 2.0;
+    white-space: nowrap;
 }
+ul{
+    padding:0.5rem;
+} 
+li{
+    list-style:none;
+}  
 p{
     font-family: serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     line-height: 1.3;
 }
