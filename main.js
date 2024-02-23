@@ -5,6 +5,7 @@ let phrases='';
 let text='';
 let ul='';
 let li='';
+let li_element='';
 
 //検索結果で使う変数
 let keyword='';
@@ -79,6 +80,8 @@ function search(){
         ul.removeChild(ul.firstChild);
     };
 
+    li='';
+
     //結果を表示する
     if (foundList.length>0){
 
@@ -92,16 +95,16 @@ function search(){
             number=String(event.no);
             kami_phrase=String(event.kami);
             simo_phrase=String(event.simo);
-            //リストをHTMLに作成
-            li=document.createElement('li');
+            
             //リストに表示するテキストを作成
-            text = document.createTextNode(number+'番歌：'+kami_phrase+' / '+simo_phrase);
-
-            li.appendChild(text);
-            ul.appendChild(li);
+            li_element='<li><span style="color:#1d993e">'+number+'番歌：</span>'+'<br>'+kami_phrase+'<br>'+simo_phrase+'</li>';
+            //リストを作成
+            li=li+li_element
 
         });
 
+        ul.innerHTML=li;
+        console.log(ul.firstChild);
         document.getElementById('searchresult').textContent=list_length+'句見つかりました';
         
     }else{
