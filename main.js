@@ -83,6 +83,7 @@ function search(){
     if (foundList.length>0){
 
         console.log(foundList);
+        const list_length=foundList.length;
 
         //mapメソッドを使いオブジェクト型の配列からデータを取り出す（反復処理）
         foundList.map(function(event){
@@ -94,14 +95,14 @@ function search(){
             //リストをHTMLに作成
             li=document.createElement('li');
             //リストに表示するテキストを作成
-            text = document.createTextNode(number+'番歌：'+kami_phrase+' '+simo_phrase);
+            text = document.createTextNode(number+'番歌：'+kami_phrase+' / '+simo_phrase);
 
             li.appendChild(text);
             ul.appendChild(li);
 
         });
 
-        document.getElementById('searchresult').textContent='見つかりました';
+        document.getElementById('searchresult').textContent=list_length+'句見つかりました';
         
     }else{
         document.getElementById('searchresult').textContent='見つかりませんでした';
