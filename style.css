@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.kiwi-maru-regular {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.rampart-one-regular {
+  font-family: "Rampart One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}  
+.klee-one-semibold {
+    font-family: "Klee One", cursive;
+    font-weight: 600;
+    font-style: normal;
+}  
+html{
+    font-size: 100%;
+}
+body{
+    background-color: #f4f5ed;
+}
+h1{
+    text-align: center;
+    background-color:#55e068;
+    color:aliceblue;
+    font-size: 5rem;
+    font-family: "Rampart One",sans-serif;
+}
+h2{
+    font-family: "Kiwi Maru",serif;
+    font-size: 2rem;
+    text-align: center;
+}
+.search_box{
+    text-align: center;
+}
+.search_text{
+    text-align: left;
+    font-size: 1.4rem;
+    font-family: "Klee One",cursive;
+    line-height: 2.0;
+}
+p{
+    font-family: serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.3;
+}
