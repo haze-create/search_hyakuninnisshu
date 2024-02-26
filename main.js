@@ -12,11 +12,11 @@ let keyword='';
 let number='';
 let simo_phrase='';
 let kami_phrase='';
+let sakusya_name='';
 let foundList='';
 
 //JSでの処理を行う↓
 window.addEventListener('load',function(){
-    console.log('ページの読み込みが完了しました！');
 
     ul=document.getElementById('searchtext');
 
@@ -45,7 +45,6 @@ function getdata(){
 function search_by_kami(){
     
     keyword=document.getElementById('searchword').value;
-    console.log(keyword);
 
     //indexOfは何番目にその文字列が見つかったかを表してくれるので、これで前方一致が作れる
     //!==-1とすれば-1(一致しなかった)になったもの以外を表せるので、部分一致が作れる
@@ -61,7 +60,6 @@ function search_by_kami(){
 function search_by_simo(){
     
     keyword=document.getElementById('searchword').value;
-    console.log(keyword);
 
     //indexOfは何番目にその文字列が見つかったかを表してくれるので、これで前方一致が作れる
     //!==-1とすれば-1(一致しなかった)になったもの以外を表せるので、部分一致が作れる
@@ -85,7 +83,6 @@ function search(){
     //結果を表示する
     if (foundList.length>0){
 
-        console.log(foundList);
         const list_length=foundList.length;
 
         //mapメソッドを使いオブジェクト型の配列からデータを取り出す（反復処理）
@@ -95,9 +92,10 @@ function search(){
             number=String(event.no);
             kami_phrase=String(event.kami);
             simo_phrase=String(event.simo);
+            sakusya_name=String(event.sakusya);
             
             //リストに表示するテキストを作成
-            li_element='<li><span style="color:#1d993e">'+number+'番歌：</span>'+'<br>'+kami_phrase+'<br>'+simo_phrase+'</li>';
+            li_element='<li><span style="color:#1d993e">'+number+'番歌：'+sakusya_name+'</span>'+'<br>'+kami_phrase+'<br>'+simo_phrase+'</li>';
             //リストを作成
             li=li+li_element
 
